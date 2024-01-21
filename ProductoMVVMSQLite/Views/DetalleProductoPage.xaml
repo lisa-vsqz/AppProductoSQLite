@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductoMVVMSQLite.Views.DetalleProductoPage"
+             Title="DetalleProductoPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="Nombre"
+               Text="Nombre"
+               FontSize="32"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               Margin="20"/>
+            <Label x:Name="Descripcion"
+               Text="Descripcion"
+               FontSize="15"
+               HorizontalOptions="StartAndExpand"
+               Margin="20, 0"/>
+            <StackLayout Orientation="Horizontal" Margin="20, 0">
+                <Label Text="Cantidad: "
+                    FontSize="18"/>
+                <Label x:Name="Cantidad"
+                    Text="Cantidad"
+                    FontSize="18"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    Text="Borrar"
+                    FontSize="20"
+                    HorizontalOptions="Fill"
+                    Margin="10"
+                    BackgroundColor="IndianRed"
+                    Command="{Binding BorrarProducto}"
+                />
+                <Button
+                    Text="Editar"
+                    FontSize="20"
+                    HorizontalOptions="Fill"
+                    Margin="10"
+                    BackgroundColor="Yellow"
+                    Clicked="OnClickEditarProducto"
+                />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
